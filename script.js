@@ -1,13 +1,23 @@
 function hesapla() {
-    let yolcuSayisi = parseInt(document.getElementById("yolcuSayisi").value);
+    let gidisYolcu = parseInt(document.getElementById("gidisYolcu").value);
+    let donusYolcu = parseInt(document.getElementById("donusYolcu").value);
     let kisiBasiEuro = parseFloat(document.getElementById("euroHarcama").value);
     let kisiBasiTL = parseFloat(document.getElementById("tlHarcama").value);
 
-    let toplamYolcu = yolcuSayisi * 2;
-    let toplamEuro = toplamYolcu * kisiBasiEuro;
-    let toplamTL = toplamYolcu * kisiBasiTL;
+    let gidisToplamEuro = gidisYolcu * kisiBasiEuro;
+    let donusToplamEuro = donusYolcu * kisiBasiEuro;
+    let genelToplamEuro = gidisToplamEuro + donusToplamEuro;
 
-    document.getElementById("toplamYolcu").innerText = toplamYolcu;
-    document.getElementById("toplamEuro").innerText = toplamEuro.toFixed(2);
-    document.getElementById("toplamTL").innerText = toplamTL.toFixed(2);
+    let gidisToplamTL = gidisYolcu * kisiBasiTL;
+    let donusToplamTL = donusYolcu * kisiBasiTL;
+    let genelToplamTL = gidisToplamTL + donusToplamTL;
+
+    document.getElementById("toplamGidisYolcu").innerText = gidisYolcu;
+    document.getElementById("toplamDonusYolcu").innerText = donusYolcu;
+    document.getElementById("gidisEuro").innerText = gidisToplamEuro.toFixed(2);
+    document.getElementById("donusEuro").innerText = donusToplamEuro.toFixed(2);
+    document.getElementById("gidisTL").innerText = gidisToplamTL.toFixed(2);
+    document.getElementById("donusTL").innerText = donusToplamTL.toFixed(2);
+    document.getElementById("toplamEuro").innerText = genelToplamEuro.toFixed(2);
+    document.getElementById("toplamTL").innerText = genelToplamTL.toFixed(2);
 }
