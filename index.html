@@ -10,8 +10,11 @@
     <div class="container">
         <h2>Yolcu Harcama Hesaplama</h2>
         
-        <label for="yolcuSayisi">Tek Yön Yolcu Sayısı:</label>
-        <input type="number" id="yolcuSayisi" placeholder="Örn: 100" value="100">
+        <label for="gidisYolcu">Gidiş Yolcu Sayısı:</label>
+        <input type="number" id="gidisYolcu" placeholder="Örn: 100" value="100">
+
+        <label for="donusYolcu">Dönüş Yolcu Sayısı:</label>
+        <input type="number" id="donusYolcu" placeholder="Örn: 80" value="80">
 
         <label for="euroHarcama">Kişi Başı Euro Harcaması (€):</label>
         <input type="number" id="euroHarcama" placeholder="Örn: 50" value="50">
@@ -22,9 +25,14 @@
         <button onclick="hesapla()">Hesapla</button>
 
         <div id="sonuc">
-            <p><strong>Gidiş-Dönüş Toplam Yolcu:</strong> <span id="toplamYolcu">-</span></p>
-            <p><strong>Toplam Euro Harcaması:</strong> <span id="toplamEuro">-</span> €</p>
-            <p><strong>Toplam TL Harcaması:</strong> <span id="toplamTL">-</span> ₺</p>
+            <p><strong>Toplam Gidiş Yolcusu:</strong> <span id="toplamGidisYolcu">-</span></p>
+            <p><strong>Toplam Dönüş Yolcusu:</strong> <span id="toplamDonusYolcu">-</span></p>
+            <p><strong>Gidiş İçin Toplam Euro Harcaması:</strong> <span id="gidisEuro">-</span> €</p>
+            <p><strong>Dönüş İçin Toplam Euro Harcaması:</strong> <span id="donusEuro">-</span> €</p>
+            <p><strong>Gidiş İçin Toplam TL Harcaması:</strong> <span id="gidisTL">-</span> ₺</p>
+            <p><strong>Dönüş İçin Toplam TL Harcaması:</strong> <span id="donusTL">-</span> ₺</p>
+            <p><strong>Genel Toplam Euro Harcaması:</strong> <span id="toplamEuro">-</span> €</p>
+            <p><strong>Genel Toplam TL Harcaması:</strong> <span id="toplamTL">-</span> ₺</p>
         </div>
     </div>
 
